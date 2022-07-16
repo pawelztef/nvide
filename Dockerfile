@@ -1,3 +1,6 @@
-FROM alpine:3.14
-RUN apk update
-RUN apk add neovim
+FROM ubuntu
+RUN apt-get update -y
+RUN apt-get install -y neovim 
+RUN apt-get install -y python3 
+
+COPY ./config ./config
